@@ -9,8 +9,68 @@
 			
 			for(var i=0;i<3;i++)
 			{
-				
+				if(!isNaN(form.elements[i].value))
+					{
+						alert("This Field must be String")
+						form.elements[i].value=""
+						form.elements[i].focus()
+						return false
+					}
 			}
+			
+			if(document.F1.password.value!=document.F1.repassword.value)
+				{
+					alert("Check Confirm Password");
+					document.F1.repassword.value=""
+					documement.F1.repassword.focus()
+					return false
+				}
+			
+			
+			if(!isNaN(document.F1.phone.value))
+				{
+					if(document.F1.phone.value>9999999999)
+						{
+							alert("Enter Valid Phone Number")
+							document.F1.phone.value=""
+							document.F1.phone.focus()
+							return false
+						}
+				}else
+					{
+						alert("This field must be Number")
+						document.F1.phone.value=""
+						return false
+					}
+			
+			if(!isNaN(document.F1.amount.value))
+				{
+					if(document.F1.amount.value < 500)
+						{
+						 alert("Minimum Balance should be 500 /-")
+						 document.F1.amount.value=""
+						 document.F1.amount.focus()
+				         return false 
+						}
+				}
+			else
+				{
+					alert("This field must be Number")
+					document.F1.amount.value=""
+					return false
+				}
+			
+			for(var i=0;i<form.elements.length;i++)
+				{
+					if(form.elements[i].value=="")
+						{
+							alert("Fill out all Fields")
+							documents.F1.username.focus()
+							return false
+						}
+				}
+			
+			return false
 			
 		}
 		
@@ -19,6 +79,15 @@
 
 	<meta charset="ISO-8859-1">
 	<title>Infinite Banking..</title>
+	<link href="styles.css" rel="stylesheet" type="text/css">
+	<script>
+		
+		function ctck()
+		{
+			var sds=document.getElementById("dum");
+		}
+		
+	</script>
 </head>
 <body>
 	
@@ -86,7 +155,37 @@
 						</table>
 					</div>
 			</td>
+			
+			<td width="299" valign="top">
+				<div id="welcome" style="border-right:#666666 1px dotted;">
+					<h1>Welcome</h1><br>
+					<center><img src="images/globe_10.gif" alt="business" width="196" height="106"></center>
+					<br>
+					<p>Welcome to the Infinite Online Banking, where we provide every best possible facilities to our customers. Providing easy and fast payements online.</p>
+				</div>
+			</td>
+			</tr>	
 		</table>
+		
+		<div id="footer_top">
+			<div id="footer_navigation">
+			
+			</div>
+			<div id="footer_copyright">
+				
+				<center><img alt="business" width="196" height="106"></center><br>
+				
+				<p></p><br>
+				
+				
+  				Copyright © Infinite Bank	
+				
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			document.onload=ctck();
+		</script>
 	</div>
 	
 </body>
