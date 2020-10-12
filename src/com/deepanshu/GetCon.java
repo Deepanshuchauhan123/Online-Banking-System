@@ -15,6 +15,7 @@ public class GetCon
 		try 
 		{
 			Class.forName(DBInitializer.DRIVER);
+			
 			con = DriverManager.getConnection(DBInitializer.CON_STRING,DBInitializer.USERNAME,DBInitializer.PASSWORD);
 		}catch(ClassNotFoundException e)
 		{
