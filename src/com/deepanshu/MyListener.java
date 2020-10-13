@@ -19,7 +19,9 @@ public class MyListener implements ServletContextListener
 			
 			try
 			{
+				
 				status = ps1.executeUpdate();
+				
 			}catch(Exception e)
 			{
 				status = 2;
@@ -35,10 +37,18 @@ public class MyListener implements ServletContextListener
 				if(status == 2)
 				{
 					System.out.println("else if part table does not exist has created "+status);
-					PreparedStatement ps3 = con.prepareStatement("CREATE SEQUENCE infinitenewaccount MINVALUE 1 MAXVALUE 999999999999 INCREMENT BY 1 START WITH 1 NOCACHE  NOORDER  NOCYCLE");
-					ps3.executeUpdate();
-					
-					PreparedStatement ps = con.prepareStatement("CREATE TABLE NEWACCOUNT(ACCOUNTNO INT UNSIGNED NOT NULL AUTO_INCREMENT, USERNAME VARCHAR2(4000),PASSWORD VARCHAR2(4000), REPASSWORD VARCHAR2(4000),AMOUNT VARCHAR2(4000),ADDERESS VARCHAR2(4000),PHONE NUMBER,PRIMARY KEY (ACCOUNTNO))");
+//					PreparedStatement ps3 = con.prepareStatement("CREATE SEQUENCE infinitenewaccount MINVALUE 1 MAXVALUE 999999999999 INCREMENT BY 1 START WITH 1 NOCACHE  NOORDER  NOCYCLE");
+//					ps3.executeUpdate();
+					/*CREATE TABLE Student
+					(
+							ID int NOT NULL AUTO_INCREMENT,
+							FirstName varchar(50),
+							LastName varchar(50),
+							RollNo varchar(50),
+							City varchar(50),
+							PRIMARY KEY (ID)
+							)*/
+					PreparedStatement ps = con.prepareStatement("CREATE TABLE NEWACCOUNT(ACCOUNTNO int NOT NULL AUTO_INCREMENT, USERNAME VARCHAR(50),PASSWORD VARCHAR(50), REPASSWORD VARCHAR(50),AMOUNT VARCHAR(50),ADDERESS VARCHAR(50),PHONE VARCHAR(10),PRIMARY KEY (ACCOUNTNO))");
 						ps.executeUpdate();
 				}
 				else
