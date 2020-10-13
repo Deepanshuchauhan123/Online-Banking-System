@@ -40,7 +40,7 @@ public class GetCon
 		
 		try
 		{
-			ps2 = con.prepareStatement("select infinitenewaccount.nextval from dual");
+			ps2 = con.prepareStatement("select NEWACCOUNT.nextval from dual");
 			 ResultSet rs = ps2.executeQuery();
 			 rs.next();
 			 nextvalue = rs.getInt(1);

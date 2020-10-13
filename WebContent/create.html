@@ -71,7 +71,7 @@
 						}
 				}
 			
-			return false
+			return true
 			
 		}
 		
@@ -135,7 +135,7 @@
 						</tr>
 							<tr>
 							<td>
-								<form name=F1 onSubmit="return dil(this)" action="CreateServlet">
+								<form name=F1 onSubmit="return dil(this)" action="CreateServlet" method="post">
 								
 									<table cellspacing="5" cellpadding="3">
 									
@@ -143,7 +143,7 @@
 										<tr><td>PASSWORD:</td><td> <input type="password" name="password"/></td></tr>
 										<tr><td>RE-PASSWORD:</td><td> <input type="password" name="repassword"/></td></tr>
 										<tr><td>AMOUNT:</td><td> <input type="text" name="amount"/></td></tr>
-										<tr><td>ADDRESS:</td><td> <input type="text" name="adderess"/></td></tr>
+										<tr><td>ADDRESS:</td><td> <input type="text" name="address"/></td></tr>
 										<tr><td>PHONE:</td><td> <input type="text" name="phone"/></td></tr>
 										<tr><td></td><td><input type="submit" value="Submit"/>
 										<INPUT TYPE=RESET VALUE="CLEAR"></td></tr>

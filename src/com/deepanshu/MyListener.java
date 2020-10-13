@@ -19,13 +19,16 @@ public class MyListener implements ServletContextListener
 			
 			try
 			{
+
+				ps1.executeQuery();
 				
-				status = ps1.executeUpdate();
+				status=0;
 				
 			}catch(Exception e)
 			{
 				status = 2;
 				System.out.println("my status is 1111111 "+status);
+				e.printStackTrace();
 			}
 			
 			if(status == 0)

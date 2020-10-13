@@ -16,9 +16,9 @@ public class RegisterUser
 			
 			ps = con.prepareStatement("insert into NEWACCOUNT values(?,?,?,?,?,?,?)");
 			
-			int nextvalue1 = GetCon.getPrimaryKey();
+			//int nextvalue1 = GetCon.getPrimaryKey();
 			
-			ps.setInt(1,nextvalue1);
+			ps.setString(1,null);
 			ps.setString(2, username);
 			ps.setString(3,password);
 			ps.setString(4, repassword);
