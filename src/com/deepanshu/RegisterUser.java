@@ -20,7 +20,7 @@ public class RegisterUser
 			
 			ps.setString(1,null);
 			ps.setString(2, username);
-			ps.setString(3,password);
+			ps.setString(3, password);
 			ps.setString(4, repassword);
 			ps.setDouble(5, amount);
 			ps.setString(6, address);

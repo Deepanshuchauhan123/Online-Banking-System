@@ -28,21 +28,7 @@
 			
 			
 			
-			if(!isNaN(document.F1.phone.value))
-				{
-					if(document.F1.phone.value>9999999999)
-						{
-							alert("Enter Valid Phone Number")
-							document.F1.phone.value=""
-							document.F1.phone.focus()
-							return false
-						}
-				}else
-					{
-						alert("This field must be Number")
-						document.F1.phone.value=""
-						return false
-					}
+			
 			
 			if(!isNaN(document.F1.amount.value))
 				{
@@ -58,6 +44,22 @@
 				{
 					alert("This field must be Number")
 					document.F1.amount.value=""
+					return false
+				}
+			
+			if(!isNaN(document.F1.phone.value))
+			{
+				if(document.F1.phone.value>9999999999)
+					{
+						alert("Enter Valid Phone Number")
+						document.F1.phone.value=""
+						document.F1.phone.focus()
+						return false
+					}
+			}else
+				{
+					alert("This field must be Number")
+					document.F1.phone.value=""
 					return false
 				}
 			

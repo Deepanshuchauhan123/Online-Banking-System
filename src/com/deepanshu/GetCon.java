@@ -31,29 +31,29 @@ public class GetCon
 		return con;
 	}
 	
-	public static int getPrimaryKey()
-	{
-		int nextvalue = 0;
-		Connection con = GetCon.getcon();
-		
-		PreparedStatement ps2;
-		
-		try
-		{
-			ps2 = con.prepareStatement("select NEWACCOUNT.nextval from dual");
-			 ResultSet rs = ps2.executeQuery();
-			 rs.next();
-			 nextvalue = rs.getInt(1);
-			
-			
-		}catch(SQLException e)
-		{
-			e.printStackTrace();
-		}
-		
-		return nextvalue;
-		
-	}
+//	public static int getPrimaryKey()
+//	{
+//		int nextvalue = 0;
+//		Connection con = GetCon.getcon();
+//		
+//		PreparedStatement ps2;
+//		
+//		try
+//		{
+//			ps2 = con.prepareStatement("select NEWACCOUNT.nextval from dual");
+//			 ResultSet rs = ps2.executeQuery();
+//			 rs.next();
+//			 nextvalue = rs.getInt(1);
+//			
+//			
+//		}catch(SQLException e)
+//		{
+//			e.printStackTrace();
+//		}
+//		
+//		return nextvalue;
+//		
+//	}
 	
 	
 	
