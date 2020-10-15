@@ -84,7 +84,7 @@
 			
 				<tr>
 					<td width="300" valign="top" style="border-right:#666666 1px dotted;">
-						<div id="services">
+						<div id="services"><br>
 							<h1>Services</h1><br>
 							<ul>
 								<li><a href="#">www.OnlineBanking.com</a></li>
@@ -96,6 +96,7 @@
 				 	
 				 	<td width="1200" valign="top">
 				 		<div id="welcome" style="border-right:#666666 1px dotted;">
+				 			<br>
 				 			<h1>BALANCE FORM</h1><br>
 				 			<table align="center" bgcolor="white">
 				 				
@@ -112,7 +113,7 @@
 				 							%>
 				 						</div>
 				 						
-				 						<form name="F1" onsubmit="return dil(this)" action="balance.jsp">
+				 						<form name="F1" onsubmit="return dil(this)" action="balance.jsp" method="post">
 				 							
 				 							<table cellspacing="5" cellpadding="2">
 				 								
@@ -136,7 +137,7 @@
 				 	
 				 	<td width="299" valign="top">
 				 		<div id="welcome" style="text-align:center;border-right:#666666 1px dotted;">
-					
+							<br>
 					 		<h1>Welcome</h1><br>
 							<center><img src="images/globe_10.gif" alt="business" width="196" height="106"></center>
 							<br>
