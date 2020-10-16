@@ -99,9 +99,9 @@
 					 				
 					 				if(rs1.next())
 					 				{*/
-					 					out.print("Your balance has increase");
+					 					out.print("Your balance has increase ");
 					 					request.setAttribute("totaldataamount",dataamount);
-					 					request.setAttribute("balance", "Your balance has increase");
+					 					request.setAttribute("balance", "Your Account Balance has increased and your Current Balance is  ");
 					 					%>
 					 					<jsp:forward page="Totalbalance.jsp"></jsp:forward>
 					 					<% 
