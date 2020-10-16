@@ -38,6 +38,13 @@
 				    document.F1.password.focus()
 				    return false
 				}
+				if(isNaN(document.F1.amount.value))
+				{
+			        alert("Amount  must  be  number & can't be null")
+				    document.F1.amount.value=""
+				    document.F1.amount.focus()
+				    return false
+				}
 				return true
 			}
 			
