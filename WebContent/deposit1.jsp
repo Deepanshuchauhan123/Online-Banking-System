@@ -42,7 +42,6 @@
 			}
 			
 		</SCRIPT>
-		
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>Infinite Banking</title>
 		<link href="styles.css" rel="stylesheet" type="text/css">
@@ -53,10 +52,9 @@
 				var sds = document.getElementById("dum");
 			}
 		</script>
-		
 	</head>
+	
 	<body>
-		
 		<div id="top_links">
 		
 			<div id="header">
@@ -97,7 +95,7 @@
 				 	<td width="1200" valign="top">
 				 		<div id="welcome" style="border-right:#666666 1px dotted;">
 				 			<br>
-				 			<h1>BALANCE FORM</h1><br>
+				 			<h1>DEPOSIT FORM</h1><br>
 				 			<table align="center" bgcolor="white">
 				 				
 				 				<tr>
@@ -113,22 +111,21 @@
 				 							%>
 				 						</div>
 				 						
-				 						<form name="F1" onsubmit="return dil(this)" action="balance.jsp" method="post">
-				 							
-				 							<table cellspacing="5" cellpadding="2">
+				 						<form name=F1 onSubmit="return dil(this)" action="deposit.jsp" method="post">
+				 							<table cellspacing="5" cellpadding="3">
 				 								
-				 								<tr><td>ACCOUNT NO:</td><td><input type="text" name="accountno"/></td></tr>
-				 								<tr><td>USERNAME:</td><td><input type="text" name="username"/></td></tr>
-				 								<tr><td>PASSWORD:</td><td><input type="password" name="password"/></td></tr>
+				 								<tr><td>ACCOUNT NO</td><td><input type="text" name="accountno"/></td></tr>
+				 								<tr><td>USERNAME</td><td><input type="text" name="username"/></td></tr>
+				 								<tr><td>PASSWORD</td><td><input type="password" name="password"/></td></tr>
+				 								<tr><td>AMOUNT</td><td><input type="text" name="amount"/></td></tr>
 				 								
 				 								<tr><td></td><td><input type="submit" value="Submit"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 								<input type="reset" value="CLEAR"></td></tr>
 				 								
-				 								<input type=RESET value="CLEAR"></td></tr>
-				 										 								
 				 							</table>
-				 							
+				 											 							
 				 						</form>
-				 					</td>
+				 						</td>
 				 				</tr>	
 				 				
 				 			</table>
@@ -174,9 +171,4 @@
 		
 	</body>
 </html>
-
-
-
-
-
-
+				 						
