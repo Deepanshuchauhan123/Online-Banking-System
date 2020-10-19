@@ -132,7 +132,7 @@
 				 							%>
 				 						</div>
 				 						
-				 						<form name=F1 onSubmit="return dil(this)" action="withdraw.jsp" method="post">
+				 						<form name=F1 onSubmit="return dil(this)" action="transfer.jsp" method="post">
 				 							<table cellspacing="5" cellpadding="3">
 				 								
 				 								<tr><td>ACCOUNT NO</td><td><input type="text" name="accountno"/></td></tr>
