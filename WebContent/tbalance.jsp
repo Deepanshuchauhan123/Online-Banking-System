@@ -2,8 +2,8 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>Infinite Banking..</title>
 		<link href="styles.css" rel="stylesheet" type="text/css">
 		
@@ -53,9 +53,9 @@
 					</td>
 				 	
 				 	<td width="1200" valign="top">
+				 	<br><br>
 				 	
-				 	
-					 	<table>
+					 	<table border ="2" align="center" width="60%" height="60%" bgcolor="white">
 					 		<tr>
 					 			<td align="center" valign="middle" bgcolor="red"><h4>Account Info</h4></td>
 					 		</tr>
@@ -63,12 +63,19 @@
 					 		<tr>
 					 			<td>
 					 				<%
-					 					if(request.getAttribute("balance")!=null)
-					 					{
-					 						
-					 						out.print(request.getAttribute("balance"));
-					 						out.print(request.getAttribute("totaldataamount"));
-					 					}
+					 					
+					 						out.print("The Target Account Balance is ");
+					 						out.print(request.getAttribute("target account A"));
+					 							
+					 				%>
+					 			</td>
+					 			
+					 		</tr>
+					 		<tr>
+					 			<td>
+					 				<%
+						 				out.println("Your Account's Reduced Balance is ");
+					 					out.print(request.getAttribute("account B"));
 					 				%>
 					 			</td>
 					 		</tr>

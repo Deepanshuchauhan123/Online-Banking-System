@@ -1,3 +1,4 @@
+<%@page import="com.sun.corba.se.spi.orbutil.fsm.Guard.Result"%>
 <%@ page import="java.sql.*"%>
 <%@ page import="java.io.*" %>
 <%@ page import="javax.servlet.*"%>
@@ -83,11 +84,74 @@
 				 		
 					 						
 					 					Connection con = GetCon.getcon();
+					 					
+					 					
 					 					PreparedStatement ps = con.prepareStatement("select * from NEWACCOUNT where accountno='"+taccountno+"'");
+					 					ResultSet rs = ps.executeQuery();
+					 					
+					 					int dataamount = 0;
+					 					
+					 					if(rs.next())
+					 					{
+					 							dataamount = accoun + rs.getInt(5);
+					 							
+					 					}else
+					 					{
+					 						out.print("Target Account doesn't exist!!");
+					 						request.setAttribute("balance", "Target Account doesn't exist!!");
+					 						%>
+					 						<jsp:forward page="transfer1.jsp"></jsp:forward>
+					 						<%
+					 					}
+					 					
+					 					PreparedStatement ps2 = con.prepareStatement("select * from NEWACCOUNT where accountno=?");
+					 					ps2.setInt(1, accountno);
+					 					
+					 					ResultSet rs2 = ps2.executeQuery();
+					 					
+					 					int dataamount1 = 0;
+					 					
+					 					if(rs2.next())
+					 					{
+					 						dataamount1 = rs2.getInt(5) - accoun;
+					 						
+					 						
+					 					}
+					 					if(dataamount1 < 1000)
+				 						{
+				 							out.print("Your Account doesn't have sufficient Balance. Please maintain Base limit to continue");
+				 							request.setAttribute("balance", "Your Account doesn't have sufficient Balance!!");
+					 						%>
+					 						<jsp:forward page="transfer1.jsp"></jsp:forward>
+					 						<%
+				 						}else
+				 						{
+				 							
+						 					PreparedStatement ps1 =con.prepareStatement("update NEWACCOUNT set amount=? where accountno='"+taccountno+"'");
+						 					ps1.setInt(1, dataamount);
+						 					ps1.executeUpdate();
+						 					
+						 					PreparedStatement ps3 =con.prepareStatement("update NEWACCOUNT set amount=? where accountno='"+accountno+"'");
+						 					ps3.setInt(1, dataamount1);
+						 					ps3.executeUpdate();
+						 			
+					 						request.setAttribute("target account A", dataamount);
+					 						request.setAttribute("account B", dataamount1);
+					 						
+					 						%>
+					 						<jsp:forward page="tbalance.jsp"></jsp:forward>
+					 						<%
+						 					
+				 						}
 					 					
 					 				}else
 					 				{
-					 					
+
+				 						out.print("Please check your username and password");
+				 						request.setAttribute("balance", "Please check your username and password!!");
+				 						%>
+				 						<jsp:forward page="transfer1.jsp"></jsp:forward>
+				 						<%
 					 				}
 					 				
 					 			}catch(SQLException e)
@@ -97,5 +161,10 @@
 					 			
 					 		%>
 					 	</table>
+					</td>
+				</tr>
+			</table>
+		</div>
+					 	
 	</body>
 </html>
