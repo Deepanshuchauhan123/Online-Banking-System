@@ -34,6 +34,7 @@
 					</div>
 					
 					<div class="col-sm-5">
+					
 						
 						<div style="width: 100%;padding: 0px;border-radius:30%;box-shadow:0 0 10px #999999;margin-top: 50%;margin-left:30px;">
 						
