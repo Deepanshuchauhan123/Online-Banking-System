@@ -1,4 +1,12 @@
 # Online Banking System (Infinite Bank)
+
+## Technology Used :-
+### 1. JSP
+### 2. Servlets
+### 3. JDBC
+### 4. SQL Database
+
+# Application Screenshots
 ## 1. Home Page
 ![](/Images/home.png)
 
